@@ -2,10 +2,15 @@
 .dropdownmenu li {
     margin: 0;
     padding: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .dropdownmenu ul {
-    background: gray;
+    background: rgb(130, 115, 151);
     list-style: none;
     width: 100%;
 }

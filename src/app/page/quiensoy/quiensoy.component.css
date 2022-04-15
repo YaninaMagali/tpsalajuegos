@@ -1,20 +1,112 @@
-.titulos {
-    background-color: rgb(233, 213, 218);
-    color: rgb(54, 48, 98);
-    font-family: 'Nunito', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800);
+body {
+    background: rgb(233, 213, 218);
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav {
+    background: url("http://thumb1.shutterstock.com/display_pic_with_logo/1487123/134611310/stock-vector-colorful-geometric-background-with-triangles-vector-eps-134611310.jpg");
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#nav ul {
+    list-style: none;
+}
+
+#nav li {
+    display: inline-block;
     padding: 10px;
 }
 
-.contenidos {
-    color: rgb(54, 48, 98);
-    font-family: sans-serif;
-    padding: 10px;
-    background-color: rgb(233, 213, 218);
+#nav li:hover {
+    background: aquamarine;
 }
 
-.profile-img {
-    padding: 10px;
-    width: "500";
-    height: "600";
-    font: nunito;
+#nav li:hover a {
+    color: black;
+}
+
+.content {
+    padding-top: 90px;
+}
+
+.anchor {
+    display: block;
+    /*this is important!*/
+}
+
+.title {
+    position: relative;
+    display: block;
+    top: -50px;
+    padding: 20px 0;
+    font-size: 1.9em;
+}
+
+.title:before {
+    font-size: 1.5em;
+    content: "\005B";
+}
+
+.title:after {
+    font-size: 1.5em;
+    content: "\005D";
+}
+
+.page-divider {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.pgd1 {
+    background-image: url("https://media-exp1.licdn.com/dms/image/C4D03AQHNOEc05iPS2g/profile-displayphoto-shrink_800_800/0/1612545846996?e=1655337600&v=beta&t=pFS8Bif1tUxW_1LhVnxIUCCTJn_8spOS3vPndBXv20A");
+}
+
+.pgd2 {
+    background-image: url("http://image.shutterstock.com/display_pic_with_logo/683038/155224421/stock-photo-group-of-three-young-adults-laughing-and-having-a-good-time-155224421.jpg");
+}
+
+.page {
+    min-width: 200px;
+    padding: 50px 100px;
+}
+
+#page1 {
+    background: rgb(233, 213, 218);
+}
+
+#page3 {
+    background: rgb(130, 115, 151);
+}
+
+footer {
+    min-height: 200px;
+    padding: 100px;
+}
+
+footer p {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+    -o-column-count: 2;
+    -o-column-gap: 40px;
+    column-count: 2;
+    column-gap: 40px;
 }
