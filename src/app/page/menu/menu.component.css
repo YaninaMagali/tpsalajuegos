@@ -25,7 +25,8 @@
     background: rgb(130, 115, 151);
     color: #FFFFFF;
     display: block;
-    font: bold 12px/20px sans-serif;
+    font: bold 12px/20px;
+    font-family: 'Open Sans';
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;

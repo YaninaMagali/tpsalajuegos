@@ -42,6 +42,11 @@ a {
     padding-top: 90px;
 }
 
+.about-box {
+    display: flex;
+    padding-left: 10px;
+}
+
 .anchor {
     display: block;
     /*this is important!*/
@@ -66,20 +71,18 @@ a {
 }
 
 .page-divider {
+    padding: 20%;
     margin: 0 auto;
     width: 100%;
-    min-height: 500px;
-    height: 100%;
     overflow: hidden;
     background-size: cover;
 }
 
 .pgd1 {
+    margin-left: 0px;
+    width: 0px;
+    height: 5px;
     background-image: url("https://media-exp1.licdn.com/dms/image/C4D03AQHNOEc05iPS2g/profile-displayphoto-shrink_800_800/0/1612545846996?e=1655337600&v=beta&t=pFS8Bif1tUxW_1LhVnxIUCCTJn_8spOS3vPndBXv20A");
-}
-
-.pgd2 {
-    background-image: url("http://image.shutterstock.com/display_pic_with_logo/683038/155224421/stock-photo-group-of-three-young-adults-laughing-and-having-a-good-time-155224421.jpg");
 }
 
 .page {
