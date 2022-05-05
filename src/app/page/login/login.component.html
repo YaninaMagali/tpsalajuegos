@@ -1,18 +1,1 @@
-<app-menu></app-menu>
-<br>
-<br>
-<br>
-<div class="form">
-    <p><strong>Login</strong></p>
-    <div>
-        <label>Usuario</label><br>
-        <input type="text">
-    </div><br>
-    <div>
-        <label>Contraseña</label><br>
-        <input type="text">
-    </div> <br>
-    <div>
-        <button>INGRESAR</button>
-    </div>
-</div>
+<app-login-form (sendCredentialsEvent)="login($event)"></app-login-form>

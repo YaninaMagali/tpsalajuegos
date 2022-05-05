@@ -1,0 +1,14 @@
+<div class="form">
+    <p><strong>Login</strong></p>
+    <div>
+        <label>Usuario</label><br>
+        <input type="text" #user>
+    </div><br>
+    <div>
+        <label>Contraseña</label><br>
+        <input type="text" #password>
+    </div> <br>
+    <div>
+        <button type="button" (click)="sendFormCredentials(user.value)">INGRESAR</button>
+    </div>
+</div>

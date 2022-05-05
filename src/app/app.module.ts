@@ -9,6 +9,7 @@ import { HomeComponent } from './page/home/home.component';
 import { QuiensoyComponent } from './page/quiensoy/quiensoy.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { MenuComponent } from './page/menu/menu.component';
+import { LoginFormComponent } from './page/login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenuComponent } from './page/menu/menu.component';
     HomeComponent,
     QuiensoyComponent,
     NotFoundComponent,
-    MenuComponent
+    MenuComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

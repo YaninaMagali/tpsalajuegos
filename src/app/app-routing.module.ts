@@ -6,7 +6,7 @@ import { QuiensoyComponent } from './page/quiensoy/quiensoy.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component:HomeComponent},
+  { path: '', component:LoginComponent},
   { path: 'home', component:HomeComponent},
   { path: 'login', component:LoginComponent},
   { path: 'quiensoy', component:QuiensoyComponent},

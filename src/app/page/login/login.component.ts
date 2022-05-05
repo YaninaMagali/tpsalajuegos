@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { updateImportEqualsDeclaration } from 'typescript';
 
 @Component({
   selector: 'app-login',
@@ -7,26 +8,77 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  login_status = false;
+  @Output() showLogoutActionEvent: EventEmitter<object>;
+  
 
-  usuario:string = '';
-  contrasenia:string = '';  
-
-  constructor(public ruteo:Router) { 
+  constructor(private router: Router) { 
+    this.showLogoutActionEvent = new EventEmitter<object>();
   }
 
   ngOnInit(): void {
     
   }
 
-  login(){
-    console.log("Usuario:" + this.usuario);
-    console.log("Contraseña:" + this.contrasenia);
-    } 
+  login(username: string) {
+    if(this.validateCredentials(username))
+    {
+      this.changeLoginStatus();
+      this.router.navigate(['/home']);
+      //mostrar logout en menu
+      this.showLogoutAction();
+    }
+    
+  }
 
-/*     redirigir(){
-      console.log("hola redirect");
-      this.ruteo.
-    } */
+  logout(){
+    this.changeLoginStatus();
+      this.router.navigate(['/login']);
+  }
+
+  validateCredentials(username: string){
+    if(username == 'yan'){
+      return true;
+    }
+    else{
+      return false;
+    }
+    
+  }
+
+  getLoginStatus(){
+    return this.login_status;
+  }
+
+  setLoginStatus(status: boolean){
+    this.login_status = status;
+  }
+
+  setLoginStatusLocalStorage(status: string){
+    localStorage.setItem("login_status", status);
+  }
+
+  getLoginStatusLocalStorage(){
+    return localStorage.getItem("login_status");
+  }
+
+  changeLoginStatus(){
+    if(! this.getLoginStatus()){
+      this.setLoginStatus(true);
+      this.setLoginStatusLocalStorage('true');
+    } 
+    else{
+      this.setLoginStatus(false);
+      this.setLoginStatusLocalStorage('false');
+    }
+    
+  }
+
+  showLogoutAction(){
+    
+    this.showLogoutActionEvent.emit({'url': '/login','txt': 'Logout'});
+  }
+
 }
 
 
